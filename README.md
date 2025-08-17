@@ -1,33 +1,111 @@
-# Weather Modern (React + Vite + Tailwind)
 
-A polished weather app with **current weather**, **hourly (next 24h)**, **5-day forecast**, **geolocation**, **dynamic backgrounds**, and **glass UI**.
+# Weather App
+
+A modern weather web application built with **React**, **Tailwind CSS**, and **Vite**.  
+Displays **current weather**, **5-day forecast**, and **real-time local time** for any city.
+
+**Live Demo:** [Your Vercel Link Here](weather-app-jet-kappa-32.vercel.app)
+
+---
 
 ## Features
-- Search by city
-- Use current location (geolocation)
-- Current weather card
-- Next 24 hours (3-hourly)
-- 5-day forecast with min/max and icons
-- Dynamic background by weather
-- Tailwind + Framer Motion animations
-- Error toasts
 
-## Setup
+- Current weather for any city:
+  - Temperature (°C)
+  - Weather description
+  - Feels like, humidity, wind
+  - Weather icon
+  - **Real-time local time** updating every second
+- 5-day weather forecast with:
+  - Daily min/max temperature
+  - Weather description & icons
+  - Dates displayed in **DD-MM-YYYY** format
+- Modern, responsive UI using **Tailwind CSS**
+- Clean code structure and reusable components
 
-1. Install dependencies
+---
+
+## Technologies Used
+
+- **React** (Functional Components + Hooks)  
+- **Vite** (Fast development environment)  
+- **Tailwind CSS** (Modern styling)  
+- **OpenWeatherMap API** (Weather data)  
+- **Axios** (API calls)  
+
+---
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Shriramcool/Weather-App
+cd weather-app
+```
+
+### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
-2. Create `.env` in the project root:
-```
-VITE_OPENWEATHER_API_KEY=YOUR_KEY_HERE
+### 3. Create `.env` file
+
+```env
+VITE_OPENWEATHER_API_KEY=your_openweathermap_api_key
 ```
 
-3. Run
+> Get your API key from [OpenWeatherMap](https://openweathermap.org/api)
+
+### 4. Run the app locally
+
 ```bash
 npm run dev
 ```
 
-## Notes
-- Uses OpenWeather `weather` and `forecast` endpoints (Kelvin -> °C conversions in UI).
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+---
+
+## Project Structure
+
+```
+weather-app/
+├─ public/
+├─ src/
+│  ├─ components/
+│  │  ├─ CurrentCard.jsx
+│  │  └─ DailyForecast.jsx
+│  ├─ utils/
+│  │  └─ format.js
+│  ├─ App.jsx
+│  └─ main.jsx
+├─ index.css
+├─ package.json
+└─ vite.config.js
+```
+
+- `CurrentCard.jsx` → Shows current weather + live time  
+- `DailyForecast.jsx` → Shows 5-day forecast grouped by day  
+- `format.js` → Helper functions (`kelvinToC`, `toLocalTime`, `groupForecastByDay`, `formatDate`)  
+
+---
+
+## Deployment on Vercel
+
+1. Push your code to **GitHub**.
+2. Go to [Vercel](https://vercel.com/) and **import your GitHub repo**.
+3. Add your **environment variable** in Vercel dashboard:
+
+```
+VITE_OPENWEATHER_API_KEY=your_openweathermap_api_key
+```
+
+4. Deploy. Your app will be live at `https://your-vercel-project.vercel.app`.
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
