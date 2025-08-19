@@ -4,7 +4,7 @@
 A modern weather web application built with **React**, **Tailwind CSS**, and **Vite**.  
 Displays **current weather**, **5-day forecast**, and **real-time local time** for any city.
 
-**Live Demo:** [Your Vercel Link Here](weather-app-jet-kappa-32.vercel.app)
+**Live Demo:** 👉 [Click here to try the app](https://weather-app-jet-kappa-32.vercel.app)
 
 ---
 
